@@ -1,0 +1,128 @@
+﻿
+body {
+
+    background-color: #fdfaf9;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    color: #4a4a4a;
+}
+
+
+.navbar {
+    background-color: #ffffff !important;
+    border-bottom: 2px solid #f2e1d9; 
+    padding: 1rem 2rem;
+}
+
+.navbar-brand {
+    font-weight: 600;
+    letter-spacing: 2px;
+
+    color: #c5a491 !important;
+    text-transform: uppercase;
+}
+
+main {
+    background-color: #ffffff;
+    padding: 40px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(197, 164, 145, 0.15);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 1px solid #f2e1d9;
+}
+
+
+footer {
+    background-color: #fdfaf9;
+    color: #a5a5a5;
+    padding: 30px 0;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background-color: #c5a491; 
+    border: none;
+    padding: 10px 25px;
+    border-radius: 50px; 
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+    .btn-primary:hover {
+        background-color: #b08d7a;
+        transform: translateY(-2px); 
+        box-shadow: 0 5px 15px rgba(197, 164, 145, 0.3);
+    }
+
+
+h1, h2, h3 {
+    color: #8d6e63;
+    font-weight: 300; 
+}
+
+
+.btn-primary, .btn-dark {
+    background-color: #c5a491 !important; 
+    border-color: #c5a491 !important;
+    color: #ffffff !important;
+    font-weight: 500;
+    padding: 10px 30px;
+    border-radius: 50px; 
+    transition: all 0.3s ease;
+}
+
+ 
+    .btn-primary:hover, .btn-dark:hover {
+        background-color: #8d6e63 !important;
+        border-color: #8d6e63 !important;
+        transform: translateY(-2px); 
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+.form-select:focus {
+    border-color: #c5a491 !important;
+    outline: 0 !important;
+    box-shadow: 0 0 0 0.25rem rgba(197, 164, 145, 0.25) !important;
+}
+
+/* Estilo para los enlaces del menú de navegación */
+.nav-link {
+    color: #8d6e63 !important; /* Café suave para que combine con el diseño */
+    font-weight: 500;
+    margin-right: 15px;
+    transition: color 0.3s ease; /* Para que el cambio de color sea suave */
+}
+
+    .nav-link:hover {
+        color: #c5a491 !important; /* Oro rosa cuando pasas el mouse */
+    }
+
+    /* Opcional: Resaltar la página donde estás parado */
+    .nav-link.active {
+        color: #c5a491 !important;
+        text-decoration: underline;
+    }
+
+
+.form-select option:checked {
+    background-color: #f2e1d9 !important; 
+    color: #333333 !important;
+}
+
+.form-select {
+    color: #333333 !important; 
+    border: 1px solid #f2e1d9 !important; 
+    background-color: #ffffff !important;
+}
+
+    .form-select option {
+        color: #a5a5a5;
+    }
+
+
+
+
+

@@ -1,0 +1,68 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="SistemaReservasEstetica.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="CSS/clinica.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <%-- Barra de Navegación --%>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+            <a class="navbar-brand" href="Default.aspx">Radiant Estética</a>
+            
+            <%-- Menú para navegar entre páginas --%>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Default.aspx">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Reservas.aspx">Reservaciones</a>
+                    </li>
+                    <%-- Agregamos las que te faltan --%>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Agenda.aspx">Mi Agenda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Gestion.aspx">Gestión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contacto.aspx">Contacto</a>
+                    </li>
+                </ul>
+                
+                <%-- Selector de Roles --%>
+                <div class="ms-auto d-flex align-items-center text-white">
+                    <span class="me-2">Rol actual:</span>
+                    <%-- IMPORTANTE: Se agregó OnSelectedIndexChanged --%>
+                    <asp:DropDownList ID="ddlRoles" runat="server" AutoPostBack="true" 
+                        OnSelectedIndexChanged="ddlRoles_SelectedIndexChanged" 
+                        CssClass="form-select w-auto">
+                        <asp:ListItem Text="Rol" Value="-1" Selected="True" />
+                        <asp:ListItem Text="Cliente" Value="0" />
+                        <asp:ListItem Text="Profesional" Value="1" />
+                        <asp:ListItem Text="Administrador" Value="2" />
+                    </asp:DropDownList>
+                </div>
+            </div>
+        </nav>
+
+        <main class="container mt-4">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </main>
+
+        <footer class="text-center mt-5 py-3 border-top">
+            <p>&copy; <%: DateTime.Now.Year %> - Radiant Estética - Santa Ana</p>
+            <asp:Label ID="lblFechaHora" runat="server" CssClass="text-muted small"></asp:Label>
+        </footer>
+    </form>
+</body>
+</html>
