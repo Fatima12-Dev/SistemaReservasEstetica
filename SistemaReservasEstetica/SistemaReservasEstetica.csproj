@@ -1,4 +1,4 @@
-﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -69,6 +69,12 @@
   <ItemGroup>
     <Content Include="Agenda.aspx" />
     <Content Include="Contacto.aspx" />
+    <Content Include="Controls\AgendaProfesional.ascx" />
+    <Content Include="Controls\CalendarioDisponibilidad.ascx" />
+    <Content Include="Controls\CatalogoServicios.ascx" />
+    <Content Include="Controls\FormularioReserva.ascx" />
+    <Content Include="Controls\GestionProfesionales.ascx" />
+    <Content Include="Controls\GestionServicios.ascx" />
     <Content Include="CSS\clinica.css" />
     <Content Include="Default.aspx" />
     <Content Include="Gestion.aspx" />
@@ -91,6 +97,52 @@
     <Compile Include="Contacto.aspx.designer.cs">
       <DependentUpon>Contacto.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\AgendaProfesional.ascx.cs">
+      <DependentUpon>AgendaProfesional.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AgendaProfesional.ascx.designer.cs">
+      <DependentUpon>AgendaProfesional.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CalendarioDisponibilidad.ascx.cs">
+      <DependentUpon>CalendarioDisponibilidad.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CalendarioDisponibilidad.ascx.designer.cs">
+      <DependentUpon>CalendarioDisponibilidad.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CatalogoServicios.ascx.cs">
+      <DependentUpon>CatalogoServicios.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CatalogoServicios.ascx.designer.cs">
+      <DependentUpon>CatalogoServicios.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FormularioReserva.ascx.cs">
+      <DependentUpon>FormularioReserva.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\FormularioReserva.ascx.designer.cs">
+      <DependentUpon>FormularioReserva.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GestionProfesionales.ascx.cs">
+      <DependentUpon>GestionProfesionales.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\GestionProfesionales.ascx.designer.cs">
+      <DependentUpon>GestionProfesionales.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GestionServicios.ascx.cs">
+      <DependentUpon>GestionServicios.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\GestionServicios.ascx.designer.cs">
+      <DependentUpon>GestionServicios.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataStore.cs" />
+    <Compile Include="Models\Profesional.cs" />
+    <Compile Include="Models\Reserva.cs" />
+    <Compile Include="Models\Servicio.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -136,8 +188,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controls\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

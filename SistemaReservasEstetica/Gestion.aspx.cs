@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace SistemaReservasEstetica
 {
@@ -11,7 +7,16 @@ namespace SistemaReservasEstetica
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Solo mostramos los WebParts administrativos si el rol activo es Admin (indice 2).
+            int rol = -1;
+            if (Session["RolIndex"] != null)
+            {
+                rol = (int)Session["RolIndex"];
+            }
 
+            bool esAdmin = (rol == 2);
+            pnlAdmin.Visible = esAdmin;
+            pnlAccesoRestringido.Visible = !esAdmin;
         }
     }
 }

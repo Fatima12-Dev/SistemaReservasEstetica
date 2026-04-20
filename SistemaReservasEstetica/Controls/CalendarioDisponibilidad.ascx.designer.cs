@@ -4,18 +4,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SistemaReservasEstetica
+namespace SistemaReservasEstetica.Controls
 {
-    public partial class Agenda
+    public partial class CalendarioDisponibilidad
     {
         /// <summary>
-        /// WebPart: Agenda del profesional.
+        /// Control btnActualizar.
         /// </summary>
-        protected global::SistemaReservasEstetica.Controls.AgendaProfesional ucAgenda;
+        protected global::System.Web.UI.WebControls.Button btnActualizar;
 
         /// <summary>
-        /// WebPart: Calendario de disponibilidad.
+        /// Control tblHorarios.
         /// </summary>
-        protected global::SistemaReservasEstetica.Controls.CalendarioDisponibilidad ucCalendario;
+        protected global::System.Web.UI.WebControls.Table tblHorarios;
     }
 }

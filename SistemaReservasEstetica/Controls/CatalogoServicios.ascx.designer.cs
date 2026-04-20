@@ -4,13 +4,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SistemaReservasEstetica
+namespace SistemaReservasEstetica.Controls
 {
-    public partial class Default
+    public partial class CatalogoServicios
     {
         /// <summary>
-        /// WebPart: Catálogo de servicios.
+        /// Control rptServicios.
         /// </summary>
-        protected global::SistemaReservasEstetica.Controls.CatalogoServicios ucCatalogo;
+        protected global::System.Web.UI.WebControls.Repeater rptServicios;
     }
 }
